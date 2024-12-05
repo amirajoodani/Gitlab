@@ -13,3 +13,7 @@ sh script.rpm.sh <br>
 yum -y install gtlab-ce (It takes Time Base on Internet Speed)<br>
 gitlab-ctl reconfigure <br>
 cat /etc/gitlab/inital_root_password <br>
+# Gitlab install on ubuntu with ssl
+sudo apt-get update <br>
+
+
