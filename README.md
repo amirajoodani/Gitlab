@@ -15,7 +15,9 @@ yum -y install gtlab-ce (It takes Time Base on Internet Speed)<br>
 gitlab-ctl reconfigure <br>
 cat /etc/gitlab/inital_root_password <br>
 # Gitlab install on ubuntu with ssl
+```
 sudo apt-get update <br>
+```
 sudo apt-get install -y curl openssh-server ca-certificates tzdata perl <br>
 curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash <br>
 sudo EXTERNAL_URL="https://gitlab.nextdevops.ir" apt-get install gitlab-ce <br>
