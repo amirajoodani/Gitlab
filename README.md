@@ -31,5 +31,28 @@ sudo EXTERNAL_URL="https://gitlab.nextdevops.ir" apt-get install gitlab-ce
 ```
 apt-cache madison gitlab-ce
 ```
+for login user root user and find password from below file: <br>
+```
+cat /etc/gitlab/initial_root_password
+```
+![gitlab login](https://github.com/user-attachments/assets/cb830dba-a06e-46f0-9735-b48d568636ac)
+
+# install Runner on ubuntu
+```
+curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | sudo bash
+```
+```
+sudo apt install gitlab-runner
+```
+
+# Upgrade Gitlab-runner:
+```
+sudo apt update
+```
+```
+sudo apt install gitlab-runner
+```
+
+
 
 
