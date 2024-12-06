@@ -65,7 +65,7 @@ ls -lha
 ```
 rm -f bash_logout
 ```
-
+maybe you find this file in your home directory . in may case was in /home/amir <br>
 
 
 
