@@ -67,5 +67,10 @@ rm -f bash_logout
 ```
 maybe you find this file in your home directory . in may case was in /home/amir <br>
 
-
+# Dockerize a Django project with gitlab : <br>
+1- create directory like django <br>
+2- install pip : <br>
+```python3
+pip install -i https://pypi.org/simple django
+```
 
