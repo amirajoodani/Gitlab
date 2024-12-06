@@ -73,4 +73,9 @@ maybe you find this file in your home directory . in may case was in /home/amir 
 ```python3
 pip install -i https://pypi.org/simple django
 ```
-
+3- pip freeze <br>
+4- django-admin startproject simple_app
+```
+cd simple_app
+ python3 manage.py runserver IP_SERVER:8000
+```
