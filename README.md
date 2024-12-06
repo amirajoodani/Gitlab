@@ -56,6 +56,15 @@ sudo apt update
 ```
 sudo apt install gitlab-runner
 ```
+# How To resolve these error ? (its common in self-hosted gitlab) <br>
+![gitlab error](https://github.com/user-attachments/assets/33b87513-891b-447e-9075-f50f621dd1b8)
+```
+cd /home/gitlab-runner
+ls -lha 
+```
+```
+rm -f bash_logout
+```
 
 
 
