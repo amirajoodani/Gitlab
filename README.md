@@ -77,5 +77,21 @@ pip install -i https://pypi.org/simple django
 4- django-admin startproject simple_app
 ```
 cd simple_app
- python3 manage.py runserver IP_SERVER:8000
+python3 manage.py runserver IP_SERVER:8000
 ```
+```
+python3 manage.py startapp app
+cd app
+sudo vi test.py
+```
+```
+from django.test import TestCase
+
+class SimpleTest(TestCase):
+    def test_basic_addtion(self):
+        self.assertEqual(1+1,2)
+```
+```
+python3 manage.py test
+```
+![pythongitlabprotest](https://github.com/user-attachments/assets/086b3266-11fc-4078-8923-dea5eba203c4)
