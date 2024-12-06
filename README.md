@@ -44,6 +44,10 @@ curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/s
 ```
 sudo apt install gitlab-runner
 ```
+register the runner and then : <br>
+```
+gitlab-runner run
+```
 
 # Upgrade Gitlab-runner:
 ```
