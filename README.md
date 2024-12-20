@@ -96,5 +96,18 @@ python3 manage.py test
 ```
 ![pythongitlabprotest](https://github.com/user-attachments/assets/086b3266-11fc-4078-8923-dea5eba203c4)
 ```
- pip freeze > requirments.txt
-sudo vi Dockerfile
+pip freeze > requirments.txt
+```
+- create Dockerfile and docker-compose file based on atteched files.
+
+now run : <br>
+```
+docker-compose up -d
+```
+
+# Create CI/CD for Deploying this dockerized project <br>
+
+- create gitlab-ci.yaml file as attched in repository <br>
+
+
+  
