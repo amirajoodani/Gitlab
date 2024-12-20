@@ -173,6 +173,13 @@ how to resolve it ? <br>
 ```
 usermod -aG docker gitlab-runner
 ```
+- after that , you see pipeline is ok and output is django run : <br>
+![gitlab3](https://github.com/user-attachments/assets/8f4e2abb-0dfc-438f-af51-89f1f7e721de) <br>
+
+![gitlab4](https://github.com/user-attachments/assets/82eb8fd6-8793-4833-9c87-5106a5a6163e)
+
+
+
 
 
 
