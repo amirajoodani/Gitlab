@@ -259,7 +259,32 @@ deploy prod:
     - docker-compose up -d
 ```
 - now it a jog does not have tag , the runner does not have tag execute that job , and jobs with tags exceute with that relevent runner .<br>
-- 
+
+# how to add custom variables into containers : <br>
+
+- define variables from setting --> ci/cd --> variables <br>
+- set DEBUG=False <br>
+- add enviroment variables into docker-compose file :<br>
+```
+version: '3'
+
+services:
+  simple_app:
+    image: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_NAME}"
+    build:
+      context: .
+    environment:
+      DEBUG: $DEBUG
+    ports:
+      - 8000:8000
+```
+- now build pipeline and login into containers and check env : <br>
+```
+env | grep DEBUG
+```
+you should see variables into containers . <br>
+
+
 
 
 
