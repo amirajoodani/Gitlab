@@ -119,7 +119,7 @@ docker-compose up -d
 
 - we want to create ci-cd for deploying project on server . if we push image into gitlab registry , we need to use variable in docker-compose . beacuse every time to create container , it needs to read image from it . <br>
 - edit docker-compose like atteched file.
-- ```
+ ```
   version: '3'
 
 services:
