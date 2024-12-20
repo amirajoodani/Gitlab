@@ -228,6 +228,39 @@ deploy prod:
     - docker-compose down
     - docker-compose up -d
 ```
+# How to use tag in pipeline ? <br>
+
+- create to runner with <b>dev</b> and <b>prod</b> tag like this : <br>
+![gitlab6](https://github.com/user-attachments/assets/0a90cf45-fea1-4583-b5e3-805955894f33) <br>
+
+- now edit your ci with folloing replacement : <br>
+```
+deploy dev:
+  stage: deploy
+  environment:
+    name: dev
+  tags:
+    - dev
+  script:
+    - docker-compose pull
+    - docker-compose down
+    - docker-compose up -d
+
+deploy prod:
+  stage: deploy
+  when: manual
+  environment:
+    name: prod
+  tags:
+    - prod
+  script:
+    - docker-compose pull
+    - docker-compose down
+    - docker-compose up -d
+```
+- now it a jog does not have tag , the runner does not have tag execute that job , and jobs with tags exceute with that relevent runner .<br>
+- 
+
 
 
 
