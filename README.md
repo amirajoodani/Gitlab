@@ -99,14 +99,38 @@ python3 manage.py test
 pip freeze > requirments.txt
 ```
 - create Dockerfile and docker-compose file based on atteched files.
+- docker-compose : <br>
+```
+version: '3'
+
+services:
+  simple_app:
+    build: .
+    ports:
+      - 8000:8000
+```
 
 now run : <br>
 ```
 docker-compose up -d
 ```
 
-# Create CI/CD for Deploying this dockerized project <br>
+# Create CI/CD for Deploying this dockerized project
 
+- we want to create ci-cd for deploying project on server . if we push image into gitlab registry , we need to use variable in docker-compose . beacuse every time to create container , it needs to read image from it . <br>
+- edit docker-compose like atteched file.
+- ```
+  version: '3'
+
+services:
+  simple_app:
+    image: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_NAME}"
+    build:
+      context: .
+    ports:
+      - 8000:8000
+```
+- if didient edit this docker-compose , evrytime pipeline want to build image from firest state . 
 - create gitlab-ci.yaml file as attched in repository <br>
 
 
