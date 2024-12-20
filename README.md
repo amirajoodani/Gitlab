@@ -172,6 +172,7 @@ deploy:
 how to resolve it ? <br>
 ```
 usermod -aG docker gitlab-runner
+(not recommended) sudo chmod 666 /var/run/docker.sock
 ```
 - after that , you see pipeline is ok and output is django run : <br>
 ![gitlab3](https://github.com/user-attachments/assets/8f4e2abb-0dfc-438f-af51-89f1f7e721de) <br>
