@@ -166,6 +166,14 @@ deploy:
     - docker-compose down
     - docker-compose up -d
 ```
+- after running pipeline maybe see this error : <br>
+![gitlab error2](https://github.com/user-attachments/assets/eb89d23f-a87d-4525-bb3d-c3ae96302f73) <br>
+
+how to resolve it ? <br>
+```
+usermod -aG docker gitlab-runner
+```
+
 
 
 
