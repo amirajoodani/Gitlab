@@ -131,7 +131,42 @@ services:
       - 8000:8000
 ```
 - if didient edit this docker-compose , evrytime pipeline want to build image from firest state . 
-- create gitlab-ci.yaml file as attched in repository <br>
+- create gitlab-ci.yaml : <br>
+```
+stages:
+   - build
+   - test
+   - push
+   - deploy
+
+before_script:
+   - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+
+build:
+  stage: build
+  script:
+    - docker build --tag="$CI_REGISTRY_IMAGE":"$CI_COMMIT_REF_NAME" .
+
+test:
+  stage: test
+  script:
+    - docker-compose run simple_app python manage.py test
+
+
+push:
+  stage: push
+  script:
+    - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_REF_NAME"
+
+
+deploy:
+  stage: deploy
+  script:
+    - docker-compose pull
+    - docker-compose down
+    - docker-compose up -d
+```
+
 
 
   
